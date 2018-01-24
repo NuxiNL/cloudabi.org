@@ -145,6 +145,9 @@ encouraged.
 - **[CloudABI demo web server](https://github.com/NuxiNL/cloudabi-demo-webserver)**<br/>
   Example web server for CloudABI, written in C++, making use of Flower
   for networking.
+- **[This web site](https://github.com/NuxiNL/cloudabi.org)**<br/>
+  Feel free to send pull requests if you can think of ways this page can
+  be improved!
 
 ## Getting in touch
 
