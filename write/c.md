@@ -16,17 +16,18 @@ utilities. This may be set up as follows on Debian-based systems:
 
 ```sh
 apt-get install clang-5.0 lld-5.0 llvm-5.0
+prefix=/usr
 llvmroot=/usr/lib/llvm-5.0
 for target in aarch64-unknown-cloudabi armv6-unknown-cloudabi-eabihf \
               armv7-unknown-cloudabi-eabihf i686-unknown-cloudabi \
               x86_64-unknown-cloudabi; do
   for tool in ar nm objdump ranlib size; do
-    ln -s ${llvmroot}/bin/llvm-${tool} /usr/bin/${target}-${tool}
+    ln -s ${llvmroot}/bin/llvm-${tool} ${prefix}/bin/${target}-${tool}
   done
-  ln -s ${llvmroot}/bin/clang /usr/bin/${target}-cc
-  ln -s ${llvmroot}/bin/clang /usr/bin/${target}-c++
-  ln -s ${llvmroot}/bin/lld /usr/bin/${target}-ld
-  ln -s /usr/${target} ${llvmroot}/${target}
+  ln -s ${llvmroot}/bin/clang ${prefix}/bin/${target}-cc
+  ln -s ${llvmroot}/bin/clang ${prefix}/bin/${target}-c++
+  ln -s ${llvmroot}/bin/lld ${prefix}/bin/${target}-ld
+  ln -s ${prefix}/${target} ${llvmroot}/${target}
 done
 ```
 
