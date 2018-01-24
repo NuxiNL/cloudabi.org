@@ -1,0 +1,6 @@
+/.bundle/
+/.jekyll-metadata
+/.sass-cache
+/Gemfile.lock
+/public/
+/vendor/
