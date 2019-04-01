@@ -119,7 +119,7 @@ impl std::io::Write for Console {
 
 fn main() {
     let ad = argdata::env::argdata();
-    let mut it = ad.read_map().expect("argdata should be a map").iter_map();
+    let mut it = ad.read_map().expect("argdata should be a map");
     while let Some(Ok((key, val))) = it.next() {
         match key.read_str().expect("keys should be strings") {
             "console" => {
